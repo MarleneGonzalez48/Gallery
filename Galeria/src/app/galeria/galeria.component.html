@@ -1,0 +1,14 @@
+<div class="background-container">
+    <link rel="stylesheet" href="galeria.component.css">
+    <div class="carousel-container">
+        <button class="carousel-button prev" (click)="prevSlide()">&lt;</button>
+
+        <div class="carousel-track" [style.transform]="transformStyle">
+            <div class="carousel-item" *ngFor="let image of images">
+                <img [src]="image.src" [alt]="image.alt">
+                <div class="description">{{ image.description }}</div>
+            </div>
+        </div>
+        <button class="carousel-button next" (click)="nextSlide()">&gt;</button>
+    </div>
+</div>

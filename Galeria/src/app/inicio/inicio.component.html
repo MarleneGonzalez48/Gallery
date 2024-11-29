@@ -1,0 +1,16 @@
+<div class="background-container">
+    <link rel="stylesheet" href="inicio.component.css">
+    
+    <div class="container">
+        <label for="nombre">Ingresa tu nombre completo:</label>
+        <input 
+          type="text" 
+          id="nombre" 
+          [(ngModel)]="nombre" 
+          (input)="actualizarNombre()" 
+          placeholder="Escribe tu nombre">
+          
+        <button [routerLink]="['/boleto']">Continuar</button>
+    </div>
+</div>
+

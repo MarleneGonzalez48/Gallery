@@ -1,0 +1,36 @@
+<div class="background-container">
+    <link rel="stylesheet" href="boleto.component.css">
+    <div class="content">
+        <div class="ticket-container">
+            <div class="ticket">
+                <div class="ticket-front">
+                    <h2>Galeria Artista</h2>
+                    <h4>Bienvenido</h4>
+                    <p>{{ nombre }}</p>
+                    <p>Número de boleto: <strong>{{ numeroSerie }}</strong></p>
+                </div>
+                <div class="ticket-back">
+                    <h3>Visita nuestra galería física</h3>
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d363922.8477937267!2d-103.92586522656246!3d20.688203000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b199986af777%3A0xd6bb3cc8c3c4683!2sGaler%C3%ADa%20Arista!5e1!3m2!1ses-419!2smx!4v1732150748043!5m2!1ses-419!2smx"
+                        width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="extra-info">
+            <p>Presiona el botón para avanzar a nuestra galería virtual</p>
+            <button [routerLink]="['/galeria']">Ir a la galeria virtual</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById("serial").textContent = Math.floor(100000 + Math.random() * 900000);
+        });
+    </script>
+    
+</div>
+
+

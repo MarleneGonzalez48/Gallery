@@ -1,0 +1,104 @@
+.background-container{
+    background: url('https://i.pinimg.com/enabled_lo_mid/736x/ae/ae/42/aeae420d54e51b29cf0411d046bc6076.jpg') no-repeat;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.ticket-container {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.ticket {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+}
+
+.ticket:hover {
+    transform: rotateY(180deg);
+}
+
+.ticket-front, .ticket-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-front h1, 
+.ticket-front h4,
+.ticket-front p, 
+.ticket-back h1, 
+.ticket-back p {
+    margin: 0;
+    line-height: 2;
+    text-align: center;
+}
+
+.ticket-front {
+    background: linear-gradient(to right, #1e90ff, #87cefa);
+    color: white;
+}
+
+.ticket-back {
+    background: linear-gradient(to right, #ff961e, #efb5da);
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.ticket-back h3 {
+    margin-bottom: 10px;
+}
+
+.extra-info {
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    color: #1e90ff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #aaa9a9;
+}
